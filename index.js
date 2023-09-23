@@ -1,7 +1,7 @@
 const rate_items = document.querySelectorAll('.rate-item')
 const submit = document.getElementById('submit-btn')
 const result = document.getElementById('result-main')
-const text = document.getElementById('result')
+let text = document.getElementById('result')
 let select_value = 0;
 
 
@@ -26,7 +26,7 @@ function handlerSubmitRate() {
     }
     result.classList.remove('result-box-hidn')
     result.classList.add('result-box-show')
-    let result_text = `You selected out of ${select_value}`
+    let result_text = `You selected ${select_value - 1} out of ${select_value}`
     text.innerText = result_text
 }
 
